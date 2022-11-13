@@ -2,7 +2,7 @@
   "name": "Test",
   "description": "Manifest V3 Test",
   "version": "0.1.105",
-  "permissions": ["contextMenus", "tabs"],
+  "permissions": ["contextMenus", "tabs", "scripting"],
   "host_permissions": ["*://*/*"],
   "content_scripts": [
     {
