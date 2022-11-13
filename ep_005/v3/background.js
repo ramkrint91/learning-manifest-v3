@@ -34,8 +34,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
   // has the content script asked to us execute our business logic?
   if (request.cmd === "runLogic") {
-    chrome.tabs.executeScript(sender.tab.id, {
-      file: "js/logic.js"
+    chrome.scripting.executeScript({
+      target: {tabId: sender.tab.id, allFrames: true},
+      files: ['js/logic.js'],
     });
   }
 
